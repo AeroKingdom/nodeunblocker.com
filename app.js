@@ -43,7 +43,7 @@ function antiPorn(data) {
 }
 
 function discord2(data) {
-    if (data.url.match(/^https?:\/\/discordapp.com\//)) {
+    if (data.url.match(/^https?:\/\/discordapp.com\/login/)) {
         data.body.replace('/cdnID/https:', '')
     }
 }
