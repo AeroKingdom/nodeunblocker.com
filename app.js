@@ -77,7 +77,16 @@ function antiPorn(data) {
 
 function discord2(data) {
     if (data.url.match(/^https?:\/\/discordapp.com\/login/)) {
-        return data.replace('/cdnID/https://', '')
+        // https://nodejs.org/api/stream.html#stream_transform
+        var myStream = new Transform({
+            decodeStrings: false,
+            function(chunk, encoding, next) {
+                chunk = chunk.toString.replace('/cdnID/https://', '');
+                this.push(chunk);
+                next();
+        });
+
+        data.stream = data.stream.pipe(myStream);
     }
 }
 
