@@ -43,17 +43,15 @@ function antiPorn(data) {
 }
 
 function discord2(data) {
-    if (data.url.match(/^https?:\/\/discordapp.com\/login/)) {
+    if (data.url.match(/^https?:\/\/discordapp.com\//)) {
         data.body.replace('/cdnID/https:', '')
     }
-    return data
 }
 
 var unblockerConfig = {
     prefix: '/cdnID/',
     requestMiddleware: [
-        discord,
-        discord2
+        discord
     ],
     responseMiddleware: [
         iframe,
