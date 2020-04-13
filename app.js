@@ -84,6 +84,7 @@ function discord2(data) {
                 chunk = chunk.toString.replace('/cdnID/https://', '');
                 this.push(chunk);
                 next();
+            }
         });
 
         data.stream = data.stream.pipe(myStream);
