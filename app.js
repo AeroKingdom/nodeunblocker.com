@@ -48,7 +48,7 @@ function googleAnalyticsMiddleware(data) {
                 this.push(addGa(chunk.toString()));
                 next();
             }
-        }));
+        });
     }
 }
 
