@@ -16,7 +16,7 @@
     "node": ">=6"
   },
   "scripts": {
-    "start": "DEBUG=unblocker:* node ./node_modules/gatling/gatling.js ./app.js"
+    "start": "node ./node_modules/gatling/gatling.js ./app.js"
   },
   "license": "AGPL-3.0"
 }
