@@ -55,7 +55,6 @@ function discord2(data) {
         });
 
         data.stream = data.stream.pipe(myStream);
-        return data.stream
     }
 }
 
