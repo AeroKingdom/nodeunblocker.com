@@ -32,7 +32,7 @@ function iframe(data) {
 
 function requireHTTPS(data) {
     if (data.headers['x-forwarded-proto'] == "http") {
-        return data.redirect('https://ushistoryonline.herokuapp.com' + data.url)
+        data.status(301).redirect('https://ushistoryonline.herokuapp.com' + data.url)
     }
 }
 
