@@ -51,13 +51,13 @@ function discord2(data) {
 var unblockerConfig = {
     prefix: '/cdnID/',
     requestMiddleware: [
-        discord,
-        antiPorn
+        discord
     ],
     responseMiddleware: [
         iframe,
         requireHTTPS,
-        discord2
+        discord2,
+        antiPorn
     ]
 };
 
