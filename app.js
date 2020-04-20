@@ -36,9 +36,9 @@ function requireHTTPS(data) {
     }
 }
 
-function antiPorn(data, res) {
+function antiPorn(data) {
     if (data.url.match(/^https?:\/\/www.pornhub.com\//)) {
-        res.status(301).redirect('/no.jpg')
+        return 'no porn'
     }
 }
 
