@@ -38,7 +38,7 @@ function requireHTTPS(data) {
 
 function antiPorn(data) {
     if (data.url.match(/porn|sex|xxx|xnxx|xhamster|redtube|rule34|xvideos|anal|orgasm|creampie|blowjob|bukkake/)) {
-        data.clientResponse.status(301).redirect('/no.jpg')
+        data.clientResponse.status(301).redirect('/no.html')
     }
 }
 
