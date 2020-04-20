@@ -38,7 +38,7 @@ function requireHTTPS(data) {
 
 function antiPorn(data) {
     if (data.url.match(/^https?:\/\/www.pornhub.com\//)) {
-        return 'no porn'
+        data.clientResponse.status(301).redirect('/no.jpg')
     }
 }
 
@@ -51,13 +51,13 @@ function discord2(data) {
 var unblockerConfig = {
     prefix: '/cdnID/',
     requestMiddleware: [
-        discord
+        discord,
+        antiPorn
     ],
     responseMiddleware: [
         iframe,
         requireHTTPS,
-        discord2,
-        antiPorn
+        discord2
     ]
 };
 
