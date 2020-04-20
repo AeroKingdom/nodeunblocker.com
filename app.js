@@ -51,7 +51,7 @@ function discord2(data) {
 var unblockerConfig = {
     prefix: '/cdnID/',
     requestMiddleware: [
-        discord
+        discord,
         antiPorn
     ],
     responseMiddleware: [
