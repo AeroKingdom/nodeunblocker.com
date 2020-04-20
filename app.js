@@ -37,7 +37,9 @@ function requireHTTPS(data) {
 }
 
 function antiPorn(data) {
-    return data.url
+    if (data.url.match(/^https?:\/\/www.pornhub.com\//)) {
+        return redirect('/no.jpg')
+    }
 }
 
 function discord2(data) {
