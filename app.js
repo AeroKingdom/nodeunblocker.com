@@ -52,6 +52,7 @@ var unblockerConfig = {
     prefix: '/cdnID/',
     requestMiddleware: [
         discord
+        antiPorn
     ],
     responseMiddleware: [
         iframe,
