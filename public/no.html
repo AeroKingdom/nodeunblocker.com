@@ -1,9 +1,14 @@
 <html>
 <head>
   <title>No.</title>
+  <script>
+    function av() {
+      document.getElementById('a').play();
+    }
+  </script>
 </head>
-<body style="margin:0;padding:0;background:#000;">
-  <iframe width="5" height="5" src="https://www.youtube.com/embed/Ag1o3koTLWM?&autoplay=1" frameborder="0" allowfullscreen></iframe>
+<body style="margin:0;padding:0;background:#000;" onload="av()">
+  <audio id="a" loop><source src="seinfeld.mp3" type="audio/mpeg"></audio>
   <img style="width:auto;height:100%;display:block;margin-left:auto;margin-right:auto;" src="no.jpg">
 </body>
 </html>
